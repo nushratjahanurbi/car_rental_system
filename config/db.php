@@ -1,14 +1,28 @@
 <?php
 
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "car_rental_system";
+    $host='127.0.0.1';
+    $dbuser='root';
+    $dbpass='';
+    $dbname='car_rental_system';
 
-$conn = mysqli_connect($host, $user, $password, $database);
 
-if(!$conn){
-    die("Connection Failed");
-}
+    function getConnection(){
 
-?>
+        global $host;
+
+        global $dbuser;
+
+        global $dbpass;
+
+        global $dbname;
+
+
+
+        $con=mysqli_connect($host,$dbuser,$dbpass,$dbname);
+
+
+        return $con;
+
+    }
+
+ ?>
